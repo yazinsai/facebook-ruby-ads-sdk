@@ -4,6 +4,7 @@
 /.bundle
 /coverage
 .DS_Store
+*.swp
 
 /test_access_token
 /test_business_id

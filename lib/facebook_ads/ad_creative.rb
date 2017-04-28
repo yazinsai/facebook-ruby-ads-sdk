@@ -14,12 +14,12 @@ module FacebookAds
             'link' => link, # https://tophatter.com/, https://itunes.apple.com/app/id619460348, http://play.google.com/store/apps/details?id=com.tophatter
             'message' => message,
             'image_hash' => image_hash,
+            'name' => link_title, # link title
+            # 'description' => # link description
             'call_to_action' => {
               'type' => call_to_action_type,
               'value' => {
-                # 'application' =>,
-                'link' => link,
-                'link_title' => link_title
+                'link' => link
               }
             }
           }
