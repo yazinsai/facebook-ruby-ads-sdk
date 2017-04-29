@@ -14,7 +14,7 @@ module FacebookAds
     NOT_INSTALLED      = 'not_installed'.freeze
     APP_INSTALL_STATES = [INSTALLED, NOT_INSTALLED].freeze
 
-    attr_accessor :genders, :age_min, :age_max, :countries, :user_os, :user_device, :app_install_state
+    attr_accessor :genders, :age_min, :age_max, :countries, :user_os, :user_device, :app_install_state, :excluded_connections
 
     def initialize
       # self.genders = [WOMEN] # If nil, defaults to all genders.
@@ -52,7 +52,8 @@ module FacebookAds
         geo_locations: { countries: countries },
         user_os: user_os,
         user_device: user_device,
-        app_install_state: app_install_state
+        app_install_state: app_install_state,
+        excluded_connections: excluded_connections
       }.reject { |_k, v| v.nil? }
     end
   end

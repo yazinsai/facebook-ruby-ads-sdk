@@ -86,7 +86,7 @@ describe FacebookAds::AdAccount do
       targeting.age_min = 18
       targeting.age_max = 20
       targeting.countries = ['US']
-      reach = account.reach_estimate(targeting: targeting, optimization_goal: 'OFFSITE_CONVERSIONS')
+      reach = account.reach_estimate(targeting: targeting, optimization_goal: 'CONVERSIONS')
       verify(format: :json) { JSON.dump(reach) }
     end
   end
